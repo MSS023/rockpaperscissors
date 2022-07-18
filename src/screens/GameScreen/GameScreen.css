@@ -3,6 +3,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .top {
@@ -47,7 +48,6 @@
 }
 
 .bottom {
-  flex: 1;
   display: flex;
   flex-direction: column;
 }
@@ -82,7 +82,7 @@
   display: flex;
   min-width: 50%;
   width: auto;
-  height: 100%;
+  height: auto;
   flex-direction: row;
   justify-content: space-between;
   margin: 30px auto 0;
@@ -92,20 +92,22 @@
 .stage2-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
+  height: auto;
+  gap: 20px;
 }
 
 .circle-background {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  /* display: inline-block; */
+  display: inline-block;
   padding: 40px;
   box-shadow: inset 0 -0.25rem;
   border: none;
 }
 
-.circle-background > div {
+.circle {
   background: white;
   border-radius: 50%;
   border: none;
@@ -152,10 +154,6 @@
   cursor: pointer;
 }
 
-.modal-dialog {
-  width: 400px;
-}
-
 .modal-header {
   border: none;
   padding: 16px 32px;
@@ -176,4 +174,171 @@
 .close-button {
   border: none;
   background: transparent;
+}
+
+.mobile {
+  display: none;
+}
+
+.rules-image {
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .game-container {
+    height: 350px;
+    width: 375px;
+  }
+  .center-button {
+    right: calc(50% - 75px) !important;
+  }
+
+  .circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .circle-background {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .top-details {
+    width: 90%; 
+  }
+
+  .footer {
+    justify-content: center;
+  }
+
+  .mobile {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10% 0;
+  }
+}
+
+.close-button-mobile {
+  display: none;
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: 652px) {
+  .score-container {
+    height: 75px;
+    width: 112px;
+  }
+
+  .score-value {
+    font-size: 2rem;
+  }
+
+  .img-logo {
+    height: 75px;
+  }
+
+  .circle {
+    width: 130px;
+    height: 130px;
+  }
+
+  .circle-background {
+    padding: 26px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .close-button-desktop {
+    display: none;
+  }
+
+  .close-button-mobile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circle-background {
+    padding: 20px;
+  }
+
+  .stage2-card-head {
+    font-size: 1.2rem;
+  }
+
+  .game-status {
+    font-size: 2.5rem;
+  }
+
+  .play-again-btn {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .game-container {
+    height: 300px;
+    width: 275px;
+  }
+  .center-button {
+    right: calc(50% - 65px) !important;
+    bottom: 15px !important;
+  }
+  .left-button {
+    left: -15px !important;
+    top: -15px !important;
+  }
+  .right-button {
+    right: -15px !important;
+    top: -15px !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .top-details {
+    padding: 10px 15px;
+  }
+
+  .score-container {
+    height: 75px;
+    width: 112px;
+  }
+
+  .score-value {
+    font-size: 2rem;
+  }
+
+  .img-logo {
+    height: 75px;
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .circle-background {
+    padding: 16px;
+  }
+
+  .stage2-card-head {
+    font-size: 1rem;
+  }
 }

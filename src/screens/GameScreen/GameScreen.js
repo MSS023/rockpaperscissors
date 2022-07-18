@@ -110,7 +110,7 @@ function GameScreen(props) {
       >
         <div className="modal-dialog modal-fullscreen-sm-down">
           <div className="modal-content">
-            <div className="modal-header">
+            <div className="modal-header d-flex justify-content-center justify-content-sm-between">
               <h5 className="modal-title" id="staticBackdropLabel">
                 RULES
               </h5>
